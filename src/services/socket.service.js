@@ -10,7 +10,7 @@ class SocketService {
     }
 
     USER_DISCONNECTED() {
-        console.log('A user disconnected')
+        console.log('A user disconnected');
     }
 
     USER_SEND_REVIEW(data) {

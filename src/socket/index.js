@@ -8,10 +8,10 @@ const initSocket = (io) => {
 
         socketService.USER_CONNECTED();
 
-        socket.on(SOCKET_EVENT.USER_DISCONNECT, () => socketService.USER_DISCONNECTED())
+        socket.on(SOCKET_EVENT.USER_DISCONNECT, () => socketService.USER_DISCONNECTED());
 
-        socket.on(SOCKET_EVENT.USER_SEND_REVIEW, (data) => socketService.USER_SEND_REVIEW(data))
-    })
-}
+        socket.on(SOCKET_EVENT.USER_SEND_REVIEW, (data) => socketService.USER_SEND_REVIEW(data));
+    });
+};
 
 module.exports.initSocket = (io) => initSocket(io);

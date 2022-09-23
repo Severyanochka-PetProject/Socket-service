@@ -17,11 +17,11 @@ module.exports.startExpressApp = () => {
 
         app.listen(PORT, (err) => {
             if (err) {
-                reject(false)
+                reject(false);
             }
             console.log(`ExpressApp listening on PORT: ${ PORT }`);
-            resolve(true)
-        })
+            resolve(true);
+        });
     });
 
 };

@@ -17,12 +17,12 @@ const io = new Server(server, {
 const startSocketApp = () => {
     initSocket(io);
     
-    server.listen(PORT, (err) => {
+    server.listen(PORT, () => {
         console.log(`SocketApp listening on PORT: ${ PORT }`);
-    })
-}
+    });
+};
 
 module.exports = {
     io,
     startSocketApp
-}
+};
