@@ -10,6 +10,8 @@ const sequelize = new Sequelize(
         dialect: String(process.env.DB_TYPE)
   });
 
+  module.exports.sequelize = sequelize;
+
   module.exports.connectToDataBase = () => {
     return new Promise(async (resolve, reject) => {
         try {

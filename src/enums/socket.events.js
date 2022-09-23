@@ -1,7 +1,9 @@
 const SOCKET_EVENT = {
     USER_CONNECT: "connection",
     USER_DISCONNECT: "disconnect",
-    USER_SEND_REVIEW: "user_send_review",
+    USER_SEND_REVIEW: "USER_SEND_REVIEW",
+    REVIEW_SUCCESSFULLY_SEND: "REVIEW_SUCCESSFULLY_SEND",
+    REVIEW_ERROR_SEND: "REVIEW_ERROR_SEND"
 };
 
 module.exports = {
