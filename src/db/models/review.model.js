@@ -1,6 +1,7 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../index');
 
+
 const Review = sequelize.define('Review', {
     id_review: {
         type: DataTypes.INTEGER,
