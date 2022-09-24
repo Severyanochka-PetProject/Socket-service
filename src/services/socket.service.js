@@ -31,7 +31,7 @@ class SocketService {
             });
 
             this.#socket.emit(SOCKET_EVENT.REVIEW_SUCCESSFULLY_SEND);
-            this.#socket.emit(SOCKET_EVENT.REVIEW_NEW_REVIEW, data);
+            this.#socket.broadcast.emit(SOCKET_EVENT.REVIEW_NEW_REVIEW, data);
         } catch (err) {
             this.#socket.emit(SOCKET_EVENT.REVIEW_ERROR_SEND);
             console.log(err);
