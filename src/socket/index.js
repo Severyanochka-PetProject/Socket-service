@@ -4,7 +4,7 @@ const  { SOCKET_EVENT} = require('../enums/socket.events');
 const initSocket = (io) => {
 
     io.on(SOCKET_EVENT.USER_CONNECT, (socket) => {
-        const socketService = new SocketService(socket);
+        const socketService = new SocketService(socket, io);
 
         socketService.USER_CONNECTED();
 
