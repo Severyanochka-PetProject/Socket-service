@@ -9,7 +9,7 @@ const PORT = 5605;
 const server = http.createServer(expressApp);
 const io = new Server(server, {
     cors: {
-        origin: 'https://tankistpro-food.ru/',
+        origin: '*',
         credentials: true
     }
 });
