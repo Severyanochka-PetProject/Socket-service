@@ -3,9 +3,10 @@ const { SOCKET_EVENT } = require('../enums/socket.events');
 
 class SocketService {
     #socket;
-
-    constructor(socket) {
+    #io;
+    constructor(socket, io) {
         this.#socket = socket;
+        this.#io = io;
     }
 
     USER_CONNECTED() {
@@ -31,7 +32,7 @@ class SocketService {
             });
 
             this.#socket.emit(SOCKET_EVENT.REVIEW_SUCCESSFULLY_SEND);
-            this.#socket.broadcast.emit(SOCKET_EVENT.REVIEW_NEW_REVIEW, data);
+            this.io.sockets.emit(SOCKET_EVENT.REVIEW_NEW_REVIEW, data);
         } catch (err) {
             this.#socket.emit(SOCKET_EVENT.REVIEW_ERROR_SEND);
             console.log(err);
