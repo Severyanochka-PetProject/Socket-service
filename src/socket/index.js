@@ -5,7 +5,7 @@ const initSocket = (io) => {
 
     io.on(SOCKET_EVENT.USER_CONNECT, (socket) => {
         const socketService = new SocketService(socket, io);
-
+        
         socketService.USER_CONNECTED();
 
         socket.on(SOCKET_EVENT.USER_DISCONNECT, () => socketService.USER_DISCONNECTED());
