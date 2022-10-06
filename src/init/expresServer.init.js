@@ -1,6 +1,8 @@
 const express = require('express');
 const cors = require('cors');
 
+const router = require('../routes/index');
+
 const app = express();
 
 const PORT = 5600 || process.env.PORT;
@@ -9,6 +11,8 @@ app.use(cors({
     origin: ['http://localhost:3000/','https://tankistpro-food.ru/'],
     credentials: true,
 }));
+
+app.use('/socket', router);
 
 module.exports.expressApp = app;
 

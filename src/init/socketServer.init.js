@@ -3,7 +3,6 @@ const http = require('http');
 
 const { expressApp } = require("./expresServer.init");
 const { initSocket } = require('../socket/index');
-
 const PORT = 5605;
 
 const server = http.createServer(expressApp);
