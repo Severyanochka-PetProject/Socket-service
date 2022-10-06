@@ -1,9 +1,7 @@
 const router = require('express').Router();
 
-const { authProtect } = require('../middleware/authProtect');
+const { authProtectExpress } = require('../middleware/authProtect');
 
-router.get('/', authProtect, (req, res) => {
-    
-});
+router.get('/', authProtectExpress, (req, res) => {});
 
 module.exports = router;
